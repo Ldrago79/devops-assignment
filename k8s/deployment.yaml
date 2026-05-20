@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: web-container
-        image: devops-assignment-web:latest 
-        imagePullPolicy: Never
+        image: rayugaldrago/devops-assignment-web:latest 
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         env:
