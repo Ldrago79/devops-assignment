@@ -43,4 +43,8 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         kubectl apply -f k8s/
-        kubectl rollout status deployment/web-app --timeout=90s
+        echo "Waiting 15 seconds for pods to start..."
+        sleep 15
+        kubectl get pods
+        kubectl describe pods
+        kubectl rollout status deployment/web-app --timeout=180s
