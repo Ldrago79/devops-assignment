@@ -1,0 +1,3 @@
+# Ignore Terraform plugin directories
+.terraform/
+terraform.tfstate*
